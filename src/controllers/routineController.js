@@ -17,7 +17,7 @@ const generateRoutine = async (req, res) => {
     const exerciseType = isBadWeather ? 'stretching' : 'cardio';
     const exercises = await getExercises(exerciseType);
 
-    const foodQuery = temp < 18 ? 'sopa' : 'salada';
+    const foodQuery = temp < 18 ? 'soup' : 'salad';
     const food = await getFoodIdea(foodQuery);
 
     return res.json({
